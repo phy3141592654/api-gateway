@@ -17,4 +17,8 @@ export class AppService {
     let res = await axios(config.get('app').url).get(`/users?${querystr}`);
     return res.data;
   }
+  async createUsers(input : any): Promise<any> {
+    let res = await axios(config.get('app').url).post('/users', input);
+    return res.data;
+  }
 }
