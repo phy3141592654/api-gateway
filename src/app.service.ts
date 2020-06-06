@@ -8,8 +8,13 @@ export class AppService {
     return { status: 200, message: 'OK' }
   }
   async getUsers(query : any): Promise<any> {
-    console.log("url",config.get('app').url)
-    let res = await axios(config.get('app').url).get(`/users`);
+    let querystr = '';
+    for(let field in query)
+    {
+      querystr += `${field}=${query[field]}&`
+    }
+    querystr = querystr.substring(0, querystr.length-1);
+    let res = await axios(config.get('app').url).get(`/users?${querystr}`);
     return res.data;
   }
 }
