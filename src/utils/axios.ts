@@ -1,5 +1,5 @@
 import axios from 'axios';
-import https from 'https';
+const https = require('https');
 
 const axiosInstance = (baseURL: string, customHeaders: object = {}) => {
     if (customHeaders.toString() !== '[object Object]') {

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import axios from './utils/axios';
-import config from 'config';
+const config = require('config');
 
 @Injectable()
 export class AppService {
