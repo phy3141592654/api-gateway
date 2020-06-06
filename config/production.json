@@ -1,0 +1,12 @@
+{
+  "host": "localhost",
+  "port": 8000,
+  "public": "../public/",
+  "paginate": {
+    "default": 20,
+    "max": 20
+  },
+  "app": {
+    "url": "http://localhost:8008"
+  }
+}
